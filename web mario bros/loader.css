@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(rgb(27, 118, 146), rgb(1, 74, 97));
+}
+
+.loader {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+}
+
+.loader span {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    animation: animate 6s ease-in-out infinite;
+}
+
+.loader span:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 1.5s;
+    background: rgb(255, 255, 255);
+}
+
+.loader span:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation-delay: 3s;
+    background: rgb(255, 255, 255, 0.589);
+}
+
+.loader span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    animation-delay: 6s;
+    background: rgb(255, 255, 255, 0.589);
+}
+
+.loader span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    animation-delay: 4.5s;
+    background: rgb(255, 255, 255, 0.589);
+}
+
+@keyframes animate {
+    0% {
+        background: rgb(255, 255, 255);
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    25% {
+        background: rgb(255, 255, 255);
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.596);
+        transform: scaleX(1) scaleY(1);
+    }
+    75% {
+        background: rgba(255, 255, 255, 0.589);
+        transform: scaleX(1) scaleY(1);
+    }
+    100% {
+        background: rgba(255, 255, 255, 0.589);
+        transform: scaleX(1) scaleY(1);
+    }
+}
